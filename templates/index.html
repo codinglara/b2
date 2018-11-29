@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
     <title>Byte 4: Visualizing Mobile Data</title>
-    
+
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
@@ -17,9 +17,9 @@
     <!-- Custom styles for this project -->
     <link href="css/explore.css" rel="stylesheet">
   </head>
-  
+
   <body role="document">
-    
+
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container" >
@@ -40,25 +40,50 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    
+
     <div class="container theme-showcase" role="main">
-      
+
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Byte 4</h1>
         <p>Visualising location data obtained by using the Aware framework on an Android smartphone</p>
       </div>
-      
+
       <div class="page-header">
-	
+
       </div> <!-- /page-header -->
      </div> <!-- /container -->
     <div>
-	    <h1> Location visualization over a span of 2 weeks </h1>
+	    <h1> Visualization of the Location Data </h1>
     </div>
 
+    <h2> Questions </h2>
+
+    <p>
+      <ul>
+        <li> Which places are the most frequently visited over the span of 2 weeks? </li>
+        <li> What are the different travel routes I take in order to travel from home to the university? </li>
+        <li> How does my speed of travelling vary while travelling the route? </li>
+        <li> What information does the visualiztion give us, about my travelling habits? </li>
+        <li> Were any outlier data points seen? If so, what might have been the reason? </li>
+      </ul>
+    </p>
+
+    <h2> About the visualization </h2>
+    <p>
+      The visualization was created using Tableau using location data collected by my smartphone accelerometer<br>
+      <ul>
+        <li> The data was available in the form of latitude and longitude information at the time when the data was recorded </li>
+        <li> The latidude and longitude columns were imported into Tableau, and tagged as geographic data in order to get the visualization on the map</li>
+        <li> Each blue-colored circle on the map denotes a single data point </li>
+        <li> The region in the visualization annotated as 'Home', corresponds to Negley at Elwood area </li>
+        <li> The series of data points that lie close to each other around the same line correspond to Fifth Avenue </li>
+        <li> The region in the visualization annotated as 'Carnegie Mellon University' corresponds the data points in the Gates Hillman Center and at Forbes and Morewood, near the bus stop</li>
+      </ul>
+    </p>
+
     <div class='tableauPlaceholder' id='viz1539824421833' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Travel_30&#47;loc_viz&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Travel_30&#47;loc_viz' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Tr&#47;Travel_30&#47;loc_viz&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1539824421833');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-     
+
     <div>
 	    <p>The visualization above shows the location data collected by my Android device over a span of 2 weeks.</p>
     </div>
@@ -71,19 +96,62 @@
 		    <li> The density of location points (that were collected with a fixed specified frequency) also points to another interesting inference. It tells us the places on the route from Walnut St. to CMU, places that had high traffic, and slower speeds as compared to places that had less traffic and therefore higher speed ot travel. </li>
 		    <li> It can also be inferred that I take the same route on most days when travelling from and to CMU. </li>
 	    </ul>
-    </div>
 
+
+    <br>
+    <p>Therefore, we can answer our questions now with the information from the visualization
+      <ul>
+        <li> Which places are the most frequently visited over the span of 2 weeks? <br>
+          <b>Answer:</b> The University and my apartment were the most frequently visited places </li>
+        <li> What are the different travel routes I take in order to travel from home to the university? <br>
+          <b>Answer:</b> There is mainly a single bus route taken to travel from my home to the university and back.
+          This can be seen in the travel information inferred from the visualization.
+          The path between my home and the university with sparce data points in the visualization is the route that I normally take</li>
+        <li> How does my speed of travelling vary while travelling the route?<br>
+          <b>Answer:</b> This information can be inferred from the sparcity or density of data points spread across various places in the route.
+          For instance, near the bus stop annotation in the visualization map, we can find many data points, because this was a place that was reached by walking.
+          However, in the Fifth Avenue route (which is travelled by the bus), we can see that the data points become sparce.
+          Since the location data is collected by the App at regular intervals, this gives us information about the speed of travel at various points in the route.
+          Thus, it can be seen that, in my travel, I'm slower while walking and faster while travelling in the bus</li>
+        <li> What information does the visualiztion give us, about my travelling habits? <br>
+          <b>Answer:</b> The visualization tells us that I tend to take the same route everytime I travel between my home and the University. </li>
+        <li> Were any outlier data points seen? If so, what might have been the reason? <br>
+          <b>Answer:</b> There is one outlier point near S Aiken Avenue. This may be because of incorrect location data collected by my smartphone.
+          Perhaps due to a network switch, i.e. WiFi to LTE, or otherwise. </li>
+    </div>
     <br/>
 
     <div>
 	    <h1>Vizualising the Altitude data over the days</h1>
     </div>
 
+    <h2> Questions </h2>
+
+    <p>
+      <ul>
+        <li> What is the lowest and highest altitude visited during the time period?</li>
+        <li> Is there a lot of variation in altitude during the same day?</li>
+        <li> What is the altitude where most of my time is spent, what may be the location that corresponds to this?</li>
+        <li> What information does the altitude data collected based on my accelerometer indicate about the topography of the city?</li>
+        <li> Were any outlier data points seen? If so, what might have been the reason? </li>
+      </ul>
+    </p>
+
+    <h2> About the visualization </h2>
+    <p>
+      The visualization was created using Tableau using altitude data collected by my smartphone accelerometer<br>
+      <ul>
+        <li> The data was available in the form of a Date column, and an Altitude column. </li>
+        <li> The two columns were imported into Tableau, and the data was plotted as a graph as shown below.</li>
+        <li> Each blue-colored circle on the graph denotes a single data point </li>
+      </ul>
+    </p>
+
     <div class='tableauPlaceholder' id='viz1539825952465' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;al&#47;altitude&#47;altitude_viz&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='altitude&#47;altitude_viz' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;al&#47;altitude&#47;altitude_viz&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1539825952465');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
     <br/>
     <div>
-	    <p>From the above altitude visualization data, we can infer:</p>
+	    <p>From the above altitude visualization data, we can observe:</p>
     </div>
 
     <div>
@@ -91,6 +159,24 @@
 		    <li>There is no data available over particular days. It might be a battery-optimization forcing the altitude sensor to switch off, or that the sensor data was not collected properly</li>
 		    <li>The altitude related data points are spread over a considerably large range, owing to the geographic nature of Pittsburgh</li>
             </ul>
+
+
+    <br>
+    <p>Therefore, we can answer our questions now with the information from the visualization
+      <ul>
+        <li> What is the lowest and highest altitude visited during the time period? <br>
+          <b>Answer:</b> We can discount the two outlier readings, and infer that the minimum altitude travelled was at 116 meters and the maximum altitude travelled was at 277 meters during the time period </li>
+        <li> Is there a lot of variation in altitude during the same day? <br>
+          <b>Answer:</b> We find a lot of variation in altitude on 15th October, however on the other days the altitude doesn't vary as much.</li>
+        <li> What is the altitude where most of my time is spent, what may be the location that corresponds to this?<br>
+          <b>Answer:</b> Most of the altitude data points lie around the 250 meters mark. This might correspond to my home, where the data is collected consistently.</li>
+        <li>What information does the altitude data collected based on my accelerometer indicate about the topography of the city? <br>
+          <b>Answer:</b> Since the data collected is over a very short distance (between my home and the University), it can be inferred that Pittsburgh is a fairly hilly city, with the topology having considerable variation in altitude. </li>
+        <li> Were any outlier data points seen? If so, what might have been the reason? <br>
+          <b>Answer:</b> There are a couple of outliers on October 15th and 16th that correspond to 0 meters altitude. As discussed previously, this may be due to bad sensor reading, or just a change in network, during which the sensor sometimes reads data with random error.</li>
+
+
+    <br/>
     </div>
 
 </body>
